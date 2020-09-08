@@ -1,3 +1,3 @@
 # data-structures-20
 
-In this assignment I'm using Cloud9 to scrap data from 10 websites.
+This is an assignment where I used AWS Cloud9 and scraped data from 10 websites and then stored them in the data folder.
