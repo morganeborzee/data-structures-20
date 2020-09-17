@@ -1,23 +1,24 @@
-*Documentation
+Documentation 
+Assignment 2:  
 
+Loading 
 ```
 var fs = require('fs');
 var cheerio = require('cheerio');
 ```
 
-// load the thesis text file into a variable, content
-// this is the file that we created in the starter code from last week
-
+Loading the text file from AA zone 2, into a variable called content.
 ```
 var content = fs.readFileSync('data/m02.html');
 ```
-
-// load content into a cheerio object
+Using Cheerio to load the content and creating the variable for the final array of addresses
 ```
 var $ = cheerio.load(content);
 var addressInfo = [];
 ```
-// print (to the console) addresses
+Selecting especifically all the elements with the precise style
+Splitting the element at /<br> and only keeping the 3rd element
+Triming and then spliting both at the "," and at the "("
 ```
     $("td[style='border-bottom:1px solid #e3e3e3; width:260px']").each(function(i, elem) {
     var startAddress = $(elem).html();
